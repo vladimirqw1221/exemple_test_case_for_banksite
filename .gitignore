@@ -3,3 +3,4 @@ venv/
 .evn
 .idea
 __pycache__
+screenshot/
