@@ -7,10 +7,8 @@ from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope='function')
 def driver():
-    proxy_patch = "23.254.161.181:80"
     options = Options()
-    options.add_argument(f'--proxy-server={proxy_patch}')
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.maximize_window()
     print("\nStart test")
